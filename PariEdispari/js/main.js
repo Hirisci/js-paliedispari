@@ -23,12 +23,12 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
-
 ---------------------------------------------------------------------------------------------*/
+
 let winUser;
 do{
-    winUser = prompt("Scegli Pari o Dispari")
-    winUser = winUser.toLocaleLowerCase()
+    winUser = prompt("Scegli Pari o Dispari");
+    winUser = winUser.toLocaleLowerCase();
 } while( winUser !== "pari" &&  winUser !== "dispari")
 
 let numUser;
@@ -37,18 +37,19 @@ do{
 } while((numUser<1 || numUser>5) || isNaN(numUser)) 
 
 
-const numCPU = rndRangeNumber(1,6);
-const sommaNum = numCPU + numUser;
-console.log(winUser,numUser, numCPU, sommaNum)
+const sommaNum = numUser + rndRangeNumber(1,6);
+console.log(winUser,numUser, numCPU, sommaNum);
 
 if((isEven(sommaNum) && winUser==="pari") || (!isEven(sommaNum) && winUser==="dispari")){ 
-    console.log("hai vinto!")
+    console.log("hai vinto!");
 } else { 
-    console.log('hai perso')  
+    console.log('hai perso');
 }
 
 
 
 
 
-
+function name(params) {
+    
+}
