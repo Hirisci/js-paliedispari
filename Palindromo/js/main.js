@@ -16,9 +16,7 @@
           if(msg[i]!==msg[msg.length-i-1]){
               controllore = false;
             }  
-            console.log(msg[i], msg[msg.length-i-1],controllore)
       }
-      console.log(controllore)
       return controllore;
   }
 
