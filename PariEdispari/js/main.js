@@ -8,10 +8,7 @@
 
   // ritorna true se il numero é pari
   function isEven(num){
-      if(num%2===0){
-          return true;
-      }
-    return false;
+    return n%2===0;
   }
 
 
@@ -33,28 +30,22 @@ do{
     winUser = prompt("Scegli Pari o Dispari")
     winUser = winUser.toLocaleLowerCase()
 } while( winUser !== "pari" &&  winUser !== "dispari")
+
 let numUser;
 do{
     numUser = Number(prompt("inserisci un numero tra 1 e 5"));
 } while((numUser<1 || numUser>5) || isNaN(numUser)) 
 
+
 const numCPU = rndRangeNumber(1,6);
 const sommaNum = numCPU + numUser;
 console.log(winUser,numUser, numCPU, sommaNum)
 
-if(isEven(sommaNum)){
-      if(winUser==="pari"){
-          console.log("hai vinto!")
-      }else{
-        console.log('hai perso')
-      }
-    } else {
-        if(winUser==="dispari"){
-            console.log("hai vinto!")
-        }else{
-          console.log('hai perso')
-        }
-    }
+if((isEven(sommaNum) && winUser==="pari") || (!isEven(sommaNum) && winUser==="dispari")){ 
+    console.log("hai vinto!")
+} else { 
+    console.log('hai perso')  
+}
 
 
 
