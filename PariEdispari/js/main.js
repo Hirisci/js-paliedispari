@@ -8,7 +8,7 @@
 
   // ritorna true se il numero é pari
   function isEven(num){
-    return n%2===0;
+    return num%2===0;
   }
 
 
